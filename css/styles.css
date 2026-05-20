@@ -1,0 +1,376 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #0a0a0a;
+  color: #ccc;
+}
+
+a { 
+  color: #e63030; 
+  text-decoration: none; 
+}
+a:hover { 
+  text-decoration: underline; 
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0;
+  height: 64px;
+  background: #111;
+  border-bottom: 2px solid #c41e1e;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 0 28px;
+  z-index: 100;
+}
+header img { 
+  height: 42px; 
+}
+header nav a {
+  color: #bbb; 
+  margin-left: 24px; 
+  font-size: .9rem; 
+  font-weight: 600;
+}
+header nav a:hover { 
+  color: #e63030; 
+  text-decoration: none; 
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 64px;
+  padding: 70px 24px 50px;
+  text-align: center;
+  background: #111;
+}
+.hero h1 { 
+  font-size: 2.6rem; 
+  font-weight: 900; 
+  color: #e63030; 
+  margin-bottom: 12px; 
+}
+.hero p { 
+  color: #888; 
+  font-size: 1.05rem; 
+  max-width: 600px; 
+  margin: 0 auto 28px; 
+  line-height: 1.6; 
+}
+.badges { 
+  display: flex; 
+  justify-content: center; 
+  gap: 12px; 
+  flex-wrap: wrap; 
+}
+.badges span {
+  background: #1a1a1a; 
+  border: 1px solid #c41e1e;
+  padding: 8px 18px; 
+  border-radius: 50px;
+  font-size: .8rem; 
+  font-weight: 600; 
+  color: #e63030;
+}
+
+/* ===== SECCIONES ===== */
+section { 
+  padding: 60px 24px; 
+  max-width: 960px; 
+  margin: 0 auto; 
+}
+.alt-bg { 
+  background: #111; 
+  max-width: 100%; 
+}
+.alt-bg > .inner { 
+  max-width: 960px; 
+  margin: 0 auto; 
+}
+h2 { 
+  font-size: 1.8rem; 
+  font-weight: 800; 
+  color: #e63030; 
+  margin-bottom: 6px; 
+}
+.desc { 
+  color: #777; 
+  margin-bottom: 28px; 
+  line-height: 1.5; 
+}
+
+/* ===== TARJETAS ===== */
+.grid2 { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
+}
+.grid3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+.card {
+  background: #1a1a1a; 
+  border: 1px solid #222; 
+  border-radius: 14px; 
+  padding: 24px;
+}
+.card:hover { 
+  border-color: #c41e1e; 
+}
+.card h3 { 
+  color: #eee; 
+  font-size: 1.05rem; 
+  font-weight: 700; 
+  margin-bottom: 6px; 
+}
+.card p { 
+  color: #888; 
+  font-size: .88rem; 
+  line-height: 1.5; 
+}
+.icon { 
+  font-size: 1.6rem; 
+  margin-bottom: 10px; 
+  display: block; 
+}
+
+/* ===== TABLA SPECS ===== */
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 16px; 
+}
+th, td { 
+  text-align: left; 
+  padding: 10px 14px; 
+  border-bottom: 1px solid #222; 
+  font-size: .9rem; 
+}
+th { 
+  color: #e63030; 
+  font-weight: 700; 
+  background: #151515; 
+}
+td { 
+  color: #aaa; 
+}
+
+/* ===== MANTENIMIENTO ===== */
+.mant-item {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 14px 18px; 
+  background: #1a1a1a; 
+  border-radius: 10px; 
+  margin-bottom: 10px;
+  border-left: 4px solid #333;
+}
+.mant-item .name { 
+  font-weight: 600; 
+  color: #ddd; 
+}
+.mant-item .date { 
+  font-size: .82rem; 
+  color: #666; 
+}
+.badge-ok { 
+  background: #0d3d0d; 
+  color: #4ade80; 
+  padding: 4px 12px; 
+  border-radius: 20px; 
+  font-size: .75rem; 
+  font-weight: 700; 
+}
+.badge-warn { 
+  background: #3d3200; 
+  color: #facc15; 
+  padding: 4px 12px; 
+  border-radius: 20px; 
+  font-size: .75rem; 
+  font-weight: 700; 
+}
+.badge-danger { 
+  background: #3d0d0d; 
+  color: #f87171; 
+  padding: 4px 12px; 
+  border-radius: 20px; 
+  font-size: .75rem; 
+  font-weight: 700; 
+}
+
+/* ===== ACCESORIOS ===== */
+.acc-card {
+  background: #1a1a1a; 
+  border: 1px solid #222; 
+  border-radius: 14px; 
+  padding: 20px; 
+  text-align: center;
+}
+.acc-card:hover { 
+  border-color: #c41e1e; 
+}
+.acc-card .price { 
+  color: #e63030; 
+  font-weight: 800; 
+  font-size: 1.1rem; 
+  margin-top: 8px; 
+}
+
+/* ===== NOTIFICACIONES ===== */
+.notif {
+  display: flex; 
+  align-items: center; 
+  gap: 14px;
+  padding: 14px 18px; 
+  background: #1a1a1a; 
+  border-radius: 10px; 
+  margin-bottom: 10px;
+  border-left: 4px solid #c41e1e;
+}
+.notif .dot { 
+  width: 10px; 
+  height: 10px; 
+  background: #e63030; 
+  border-radius: 50%; 
+  flex-shrink: 0; 
+}
+.notif .text { 
+  color: #ccc; 
+  font-size: .9rem; 
+}
+.notif .time { 
+  color: #555; 
+  font-size: .78rem; 
+  margin-left: auto; 
+  white-space: nowrap; 
+}
+
+/* ===== DASHBOARD DESGASTE ===== */
+.dash-card {
+  background: #1a1a1a; 
+  border: 1px solid #222; 
+  border-radius: 14px; 
+  padding: 20px;
+}
+.bar-label { 
+  display: flex; 
+  justify-content: space-between; 
+  font-size: .85rem; 
+  margin-bottom: 4px; 
+  color: #bbb; 
+}
+.bar-bg { 
+  background: #222; 
+  border-radius: 8px; 
+  height: 14px; 
+  overflow: hidden; 
+  margin-bottom: 14px; 
+}
+.bar-fill { 
+  height: 100%; 
+  border-radius: 8px; 
+}
+.bar-green { 
+  background: #22c55e; 
+}
+.bar-yellow { 
+  background: #eab308; 
+}
+.bar-red { 
+  background: #ef4444; 
+}
+
+/* ===== FORM ===== */
+form { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 14px; 
+}
+label { 
+  color: #aaa; 
+  font-size: .85rem; 
+  font-weight: 600; 
+  display: block; 
+  margin-bottom: 4px; 
+}
+input, select {
+  width: 100%; 
+  padding: 10px 14px; 
+  border-radius: 8px; 
+  border: 1px solid #333;
+  background: #151515; 
+  color: #ddd; 
+  font-size: .9rem;
+}
+input:focus, select:focus { 
+  outline: none; 
+  border-color: #c41e1e; 
+}
+.btn {
+  grid-column: 1 / -1;
+  background: #c41e1e; 
+  color: #fff; 
+  border: none;
+  padding: 12px; 
+  border-radius: 8px; 
+  font-size: 1rem; 
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover { 
+  background: #a01818; 
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111; 
+  border-top: 2px solid #c41e1e;
+  padding: 40px 24px; 
+  text-align: center; 
+  color: #555; 
+  font-size: .85rem;
+}
+footer .brand { 
+  color: #e63030; 
+  font-weight: 800; 
+  font-size: 1.2rem; 
+  margin-bottom: 6px; 
+}
+footer .links { 
+  margin: 14px 0; 
+}
+footer .links a { 
+  color: #777; 
+  margin: 0 12px; 
+}
+footer .links a:hover { 
+  color: #e63030; 
+}
+
+@media(max-width: 700px) {
+  .grid2, .grid3, form { 
+    grid-template-columns: 1fr; 
+  }
+  .hero h1 { 
+    font-size: 1.8rem; 
+  }
+  header nav { 
+    display: none; 
+  }
+}
