@@ -275,6 +275,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
+      if (formData.get('dataConsent') !== 'on') {
+        setMessage(registerMessage, 'Debes aceptar el tratamiento de datos para continuar con el registro.', 'error');
+        return;
+      }
+
       try {
         await apiRequest('/register', {
           nombre: formData.get('nombre'),

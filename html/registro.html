@@ -13,13 +13,25 @@
       <a class="auth-back" href="../index.html">Volver al inicio</a>
       <h1>Crear cuenta</h1>
       <p>Registra tus datos y la informacion basica de tu motocicleta.</p>
-      <div class="data-notice">
-        <div class="notice-icon">i</div>
-        <p>
-          Tratamiento de datos: la informacion ingresada se usa solo con fines educativos
-          dentro de este proyecto academico desarrollado por estudiantes.
-        </p>
-      </div>
+      <details class="data-notice" open>
+        <summary>
+          <span class="notice-icon">i</span>
+          <span>Tratamiento de datos personales</span>
+        </summary>
+        <div class="notice-content">
+          <p>
+            MotoSmart es un software academico desarrollado por estudiantes. Los datos que ingreses
+            se utilizan unicamente para demostrar el funcionamiento del registro, inicio de sesion y
+            visualizacion de informacion de la motocicleta dentro del proyecto.
+          </p>
+          <ul>
+            <li>No se vendera ni compartira tu informacion con terceros.</li>
+            <li>El correo se usa para validar tu acceso a la plataforma.</li>
+            <li>Los datos de la moto se usan para personalizar la ficha tecnica y el dashboard.</li>
+            <li>Este proyecto tiene fines educativos y no reemplaza servicios tecnicos oficiales.</li>
+          </ul>
+        </div>
+      </details>
 
       <form id="registerForm">
         <div>
@@ -62,6 +74,10 @@
           <label>Kilometraje actual</label>
           <input name="kilometraje" type="number" placeholder="12000" min="0">
         </div>
+        <label class="consent-check">
+          <input name="dataConsent" type="checkbox">
+          <span>Acepto el tratamiento de mis datos para fines educativos del proyecto MotoSmart.</span>
+        </label>
         <button class="btn" type="submit">Registrarme</button>
         <p id="registerMessage" class="form-message" aria-live="polite"></p>
       </form>
