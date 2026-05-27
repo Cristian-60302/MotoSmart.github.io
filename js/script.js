@@ -1,17 +1,13 @@
-// script.js
-// Frontend para GitHub Pages. Cambia esta URL cuando tengas publicada tu API.
+// Cambia esta URL por la URL real de tu API en Vercel.
 const API_BASE_URL = 'https://motosmart-api-vercel-github-io.vercel.app/api';
 
 document.addEventListener('DOMContentLoaded', function() {
   const loginForm = document.querySelector('#loginForm');
   const registerForm = document.querySelector('#registerForm');
   const logoutBtn = document.querySelector('#logoutBtn');
-
   const loginMessage = document.querySelector('#loginMessage');
   const registerMessage = document.querySelector('#registerMessage');
-  const sessionBox = document.querySelector('#sessionBox');
-  const sessionName = document.querySelector('#sessionName');
-  const sessionEmail = document.querySelector('#sessionEmail');
+  const protectedPage = document.body.dataset.protected === 'true';
 
   function setMessage(element, text, type) {
     if (!element) return;
@@ -34,16 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   async function apiRequest(path, data) {
-    const options = data
-      ? {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-      }
-      : { method: 'GET' };
+    const response = await fetch(API_BASE_URL + path, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-    const url = API_BASE_URL + path;
-    const response = await fetch(url, options);
     const payload = await response.json().catch(function() {
       return { ok: false, message: 'Respuesta invalida del servidor.' };
     });
@@ -55,17 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return payload;
   }
 
-  function renderSession(user) {
-    const hasUser = Boolean(user);
-
-    if (loginForm) loginForm.hidden = hasUser;
-    if (sessionBox) sessionBox.hidden = !hasUser;
-
-    if (hasUser) {
-      sessionName.textContent = user.nombre;
-      sessionEmail.textContent = user.email;
-      setMessage(loginMessage, 'Sesion iniciada correctamente.', 'success');
-    }
+  if (protectedPage && !getStoredUser()) {
+    window.location.href = './login.html';
+    return;
   }
 
   if (loginForm) {
@@ -82,10 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         saveStoredUser(payload.user);
-        renderSession(payload.user);
+        setMessage(loginMessage, 'Sesion iniciada correctamente. Redirigiendo...', 'success');
         loginForm.reset();
+
+        setTimeout(function() {
+          window.location.href = './app.html';
+        }, 700);
       } catch (error) {
-        renderSession(null);
+        saveStoredUser(null);
         setMessage(loginMessage, error.message, 'error');
       }
     });
@@ -114,8 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
           kilometraje: formData.get('kilometraje')
         });
 
-        setMessage(registerMessage, 'Usuario registrado. Ya puedes iniciar sesion.', 'success');
+        setMessage(registerMessage, 'Usuario registrado. Ahora puedes iniciar sesion.', 'success');
         registerForm.reset();
+
+        setTimeout(function() {
+          window.location.href = './login.html';
+        }, 1000);
       } catch (error) {
         setMessage(registerMessage, error.message, 'error');
       }
@@ -125,10 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (logoutBtn) {
     logoutBtn.addEventListener('click', function() {
       saveStoredUser(null);
-      renderSession(null);
-      setMessage(loginMessage, 'Sesion cerrada.', 'success');
+      window.location.href = '../index.html';
     });
   }
-
-  renderSession(getStoredUser());
 });

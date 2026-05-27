@@ -3,344 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MotoSmart - Tu moto, siempre al dia</title>
+  <title>MotoSmart - Bienvenido</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-  <!-- ===== HEADER ===== -->
-  <header>
-    <img src="./img/logo.jpg" alt="Logo MotoSmart">
-    <nav>
-      <a href="#mision">Mision</a>
-      <a href="#quienes">Quienes Somos</a>
-      <a href="#login">Inicio de sesion</a>
-      <a href="#registro">Registro</a>
-      <a href="#specs">Especificaciones</a>
-      <a href="#dashboard">Dashboard</a>
+<body class="welcome-page">
+  <header class="welcome-header">
+    <a class="brand-link" href="./index.html">
+      <span class="brand-mark">M</span>
+      <span>MotoSmart</span>
+    </a>
+    <nav class="auth-actions">
+      <a class="btn btn-secondary" href="./html/login.html" target="_blank">Iniciar sesion</a>
+      <a class="btn" href="./html/registro.html" target="_blank">Registrarse</a>
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <div class="hero">
-    <h1>Bienvenidos a MotoSmart</h1>
-    <p>Tu moto, siempre al dia: Controla especificaciones, mantenimientos y accesorios en un solo lugar.</p>
-    <div class="badges">
-      <span>Especificaciones</span>
-      <span>Mantenimiento</span>
-      <span>Accesorios</span>
-      <span>Notificaciones</span>
-    </div>
-  </div>
-
-  <!-- ===== INICIO DE SESION ===== -->
-  <section id="login">
-    <h2>Inicio de Sesion</h2>
-    <p class="desc">Ingresa con un usuario creado en la base de datos.</p>
-    <div class="auth-panel">
-      <form id="loginForm" class="auth-form">
-        <div>
-          <label>Correo electronico</label>
-          <input id="loginEmail" name="email" type="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+  <main class="welcome-main">
+    <section class="welcome-hero">
+      <div class="welcome-copy">
+        <p class="eyebrow">Gestion inteligente para motociclistas</p>
+        <h1>Bienvenido a MotoSmart</h1>
+        <p>
+          MotoSmart es una plataforma creada para ayudarte a organizar la informacion tecnica de tu moto,
+          consultar mantenimientos, revisar alertas importantes y tener una vista clara del estado general
+          de tus componentes.
+        </p>
+        <div class="welcome-buttons">
+          <a class="btn" href="./html/registro.html" target="_blank">Crear cuenta</a>
+          <a class="btn btn-secondary" href="./html/login.html" target="_blank">Ya tengo cuenta</a>
         </div>
-        <div>
-          <label>Contrasena</label>
-          <input id="loginPassword" name="password" type="password" placeholder="********" autocomplete="current-password" required>
-        </div>
-        <button class="btn" type="submit">Ingresar</button>
-      </form>
-      <div id="sessionBox" class="session-box" hidden>
-        <div>
-          <strong id="sessionName">Usuario activo</strong>
-          <span id="sessionEmail"></span>
-        </div>
-        <button id="logoutBtn" class="btn btn-secondary" type="button">Cerrar sesion</button>
       </div>
-      <p id="loginMessage" class="form-message" aria-live="polite"></p>
-    </div>
-  </section>
 
-  <!-- ===== MISION Y VISION ===== -->
-  <div class="alt-bg" id="mision">
-    <section class="inner">
-      <h2>Mision y Vision</h2>
-      <p class="desc">Los pilares que guian a MotoSmart Technologies S.A.S.</p>
-      <div class="grid2">
-        <div class="card">
-          <span class="icon">🚩</span>
-          <h3>Mision</h3>
-          <p>Ofrecer a los motociclistas una plataforma digital inteligente que centralice la información técnica de sus motocicletas, facilite el control del mantenimiento preventivo y recomiende accesorios adecuados, mejorando la seguridad, el rendimiento y la vida útil del vehículo.</p>
+      <div class="welcome-panel">
+        <div class="metric">
+          <span>Control</span>
+          <strong>Mantenimientos</strong>
         </div>
-        <div class="card">
-          <span class="icon">🔂</span>
-          <h3>Vision</h3>
-          <p>Convertirnos en una de las plataformas líderes en la gestión digital de motocicletas en todo Latinoamérica, siendo referentes en innovación, confianza y tecnología aplicada a la movilidad.</p>
+        <div class="metric">
+          <span>Consulta</span>
+          <strong>Ficha tecnica</strong>
+        </div>
+        <div class="metric">
+          <span>Alertas</span>
+          <strong>Desgaste estimado</strong>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- ===== QUIENES SOMOS ===== -->
-  <section id="quienes">
-    <h2>Quienes Somos</h2>
-    <p class="desc">MotoSmart Technologies S.A.S. es una empresa colombiana de base tecnologica dedicada al desarrollo de soluciones digitales para el sector motociclista.</p>
-    <div class="grid3">
-      <div class="card">
-        <span class="icon">💻</span>
-        <h3>Innovacion</h3>
-        <p>Soluciones digitales de vanguardia para la gestion de motocicletas.</p>
+    <section class="welcome-info">
+      <div>
+        <h2>Que puedes hacer</h2>
+        <p>Registra tu motocicleta, guarda tus datos principales y accede a una vista organizada con especificaciones, mantenimientos, accesorios recomendados y notificaciones.</p>
       </div>
-      <div class="card">
-        <span class="icon">🛡️</span>
-        <h3>Seguridad</h3>
-        <p>Promovemos la conduccion segura y el mantenimiento preventivo.</p>
+      <div>
+        <h2>Para quien es</h2>
+        <p>Esta pensado para motociclistas que quieren cuidar mejor su vehiculo y tener en un solo lugar la informacion que normalmente queda dispersa.</p>
       </div>
-      <div class="card">
-        <span class="icon">🌎</span>
-        <h3>Alcance</h3>
-        <p>Sede en Bucaramanga, Santander. Proyeccion a toda Latinoamerica.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== REGISTRO ===== -->
-  <div class="alt-bg" id="registro">
-    <section class="inner">
-      <h2>Registro de Usuario</h2>
-      <p class="desc">Crea tu cuenta para comenzar a gestionar tu motocicleta. El correo queda guardado para validar el inicio de sesion.</p>
-      <form id="registerForm">
-        <div>
-          <label>Nombre completo</label>
-          <input name="nombre" type="text" placeholder="Juan Perez" autocomplete="name" required>
-        </div>
-        <div>
-          <label>Correo electronico</label>
-          <input name="email" type="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
-        </div>
-        <div>
-          <label>Contrasena</label>
-          <input name="password" type="password" placeholder="********" autocomplete="new-password" minlength="6" required>
-        </div>
-        <div>
-          <label>Confirmar contrasena</label>
-          <input name="confirmPassword" type="password" placeholder="********" autocomplete="new-password" minlength="6" required>
-        </div>
-        <div>
-          <label>Marca de moto</label>
-          <select name="marca">
-            <option>Yamaha</option>
-            <option>Honda</option>
-            <option>Suzuki</option>
-            <option>Bajaj</option>
-            <option>KTM</option>
-            <option>AKT</option>
-            <option>Otra</option>
-          </select>
-        </div>
-        <div>
-          <label>Modelo</label>
-          <input name="modelo" type="text" placeholder="FZ 2.0">
-        </div>
-        <div>
-          <label>Ano</label>
-          <input name="anio" type="number" placeholder="2023" min="1900" max="2100">
-        </div>
-        <div>
-          <label>Kilometraje actual</label>
-          <input name="kilometraje" type="number" placeholder="12000" min="0">
-        </div>
-        <button class="btn" type="submit">Registrarme</button>
-        <p id="registerMessage" class="form-message" aria-live="polite"></p>
-      </form>
-    </section>
-  </div>
-
-  <!-- ===== ESPECIFICACIONES ===== -->
-  <section id="specs">
-    <h2>Especificaciones Tecnicas</h2>
-    <p class="desc">Ficha tecnica de ejemplo: Yamaha FZ 2.0 - 2023</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Caracteristica</th>
-          <th>Detalle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Motor</td><td>149 cc, 4 tiempos, refrigerado por aire</td></tr>
-        <tr><td>Potencia maxima</td><td>12.2 HP @ 7,250 RPM</td></tr>
-        <tr><td>Torque maximo</td><td>12.8 Nm @ 5,500 RPM</td></tr>
-        <tr><td>Transmision</td><td>5 velocidades</td></tr>
-        <tr><td>Freno delantero</td><td>Disco 267mm</td></tr>
-        <tr><td>Freno trasero</td><td>Tambor 130mm</td></tr>
-        <tr><td>Peso</td><td>137 kg</td></tr>
-        <tr><td>Capacidad tanque</td><td>13 litros</td></tr>
-        <tr><td>Rendimiento</td><td>~45 km/l</td></tr>
-        <tr><td>Tipo aceite</td><td>Yamalube 4T 20W-40</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- ===== MANTENIMIENTO ===== -->
-  <div class="alt-bg">
-    <section class="inner">
-      <h2>Control de Mantenimiento</h2>
-      <p class="desc">Estado actual de los mantenimientos programados.</p>
-      <div class="mant-item" style="border-left-color: #22c55e;">
-        <div>
-          <div class="name">Cambio de aceite</div>
-          <div class="date">Ultimo: 15/Ene/2026 - Proximo: 15/Abr/2026</div>
-        </div>
-        <span class="badge-ok">Al dia</span>
-      </div>
-      <div class="mant-item" style="border-left-color: #eab308;">
-        <div>
-          <div class="name">Revision de frenos</div>
-          <div class="date">Ultimo: 10/Oct/2025 - Proximo: 20/Feb/2026</div>
-        </div>
-        <span class="badge-warn">Proximo</span>
-      </div>
-      <div class="mant-item" style="border-left-color: #ef4444;">
-        <div>
-          <div class="name">Cambio de cadena</div>
-          <div class="date">Ultimo: 05/Mar/2025 - Vencido: 05/Dic/2025</div>
-        </div>
-        <span class="badge-danger">Urgente</span>
-      </div>
-      <div class="mant-item" style="border-left-color: #22c55e;">
-        <div>
-          <div class="name">Cambio filtro de aire</div>
-          <div class="date">Ultimo: 01/Dic/2025 - Proximo: 01/Jun/2026</div>
-        </div>
-        <span class="badge-ok">Al dia</span>
-      </div>
-      <div class="mant-item" style="border-left-color: #eab308;">
-        <div>
-          <div class="name">Revision de bujia</div>
-          <div class="date">Ultimo: 20/Ago/2025 - Proximo: 20/Feb/2026</div>
-        </div>
-        <span class="badge-warn">Proximo</span>
+      <div>
+        <h2>Como empiezas</h2>
+        <p>Crea una cuenta o inicia sesion. Al entrar, MotoSmart te lleva al panel principal con la informacion de la moto y las secciones del proyecto.</p>
       </div>
     </section>
-  </div>
-
-  <!-- ===== ACCESORIOS ===== -->
-  <section>
-    <h2>Accesorios Recomendados</h2>
-    <p class="desc">Mejora tu experiencia con accesorios compatibles.</p>
-    <div class="grid3">
-      <div class="acc-card">
-        <span class="icon">⛑️</span>
-        <h3>Casco LS2 Stream</h3>
-        <p style="color: #888; font-size: .85rem;">Integral, certificado DOT</p>
-        <div class="price">$285.000 COP</div>
-      </div>
-      <div class="acc-card">
-        <span class="icon">👜</span>
-        <h3>Maletero GIVI 34L</h3>
-        <p style="color: #888; font-size: .85rem;">Compatible con parrilla trasera</p>
-        <div class="price">$320.000 COP</div>
-      </div>
-      <div class="acc-card">
-        <span class="icon">💡</span>
-        <h3>Luces LED auxiliares</h3>
-        <p style="color: #888; font-size: .85rem;">Kit 2 unidades, 12V</p>
-        <div class="price">$75.000 COP</div>
-      </div>
-      <div class="acc-card">
-        <span class="icon">🧤</span>
-        <h3>Guantes Pro-Biker</h3>
-        <p style="color: #888; font-size: .85rem;">Proteccion nudillos, tactiles</p>
-        <div class="price">$48.000 COP</div>
-      </div>
-      <div class="acc-card">
-        <span class="icon">🔒</span>
-        <h3>Candado de disco</h3>
-        <p style="color: #888; font-size: .85rem;">Con alarma 110dB</p>
-        <div class="price">$62.000 COP</div>
-      </div>
-      <div class="acc-card">
-        <span class="icon">🏍️</span>
-        <h3>Slider protector</h3>
-        <p style="color: #888; font-size: .85rem;">Para carenaje lateral</p>
-        <div class="price">$95.000 COP</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NOTIFICACIONES ===== -->
-  <div class="alt-bg">
-    <section class="inner">
-      <h2>Notificaciones Inteligentes</h2>
-      <p class="desc">Alertas automaticas sobre el estado de tu moto.</p>
-      <div class="notif">
-        <span class="dot"></span>
-        <span class="text">Tu cambio de cadena esta vencido. Agenda una cita pronto.</span>
-        <span class="time">Hace 2 dias</span>
-      </div>
-      <div class="notif">
-        <span class="dot"></span>
-        <span class="text">Revision de frenos en 9 dias. No lo olvides.</span>
-        <span class="time">Hace 5 dias</span>
-      </div>
-      <div class="notif">
-        <span class="dot"></span>
-        <span class="text">Nuevo accesorio disponible para tu Yamaha FZ 2.0.</span>
-        <span class="time">Hace 1 semana</span>
-      </div>
-      <div class="notif">
-        <span class="dot"></span>
-        <span class="text">Bujia proxima a requerir cambio segun tu kilometraje.</span>
-        <span class="time">Hace 1 semana</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ===== DASHBOARD DESGASTE ===== -->
-  <section id="dashboard">
-    <h2>Dashboard - Desgaste Estimado</h2>
-    <p class="desc">Vista previa del estado de los componentes de tu moto (Yamaha FZ 2.0 - 12,000 km).</p>
-    <div class="grid2">
-      <div class="dash-card">
-        <div class="bar-label"><span>Aceite de motor</span><span>72%</span></div>
-        <div class="bar-bg"><div class="bar-fill bar-yellow" style="width: 72%;"></div></div>
-        <div class="bar-label"><span>Pastillas de freno</span><span>45%</span></div>
-        <div class="bar-bg"><div class="bar-fill bar-yellow" style="width: 45%;"></div></div>
-        <div class="bar-label"><span>Kit de cadena</span><span>88%</span></div>
-        <div class="bar-bg"><div class="bar-fill bar-red" style="width: 88%;"></div></div>
-      </div>
-      <div class="dash-card">
-        <div class="bar-label"><span>Llantas</span><span>30%</span></div>
-        <div class="bar-bg"><div class="bar-fill bar-green" style="width: 30%;"></div></div>
-        <div class="bar-label"><span>Filtro de aire</span><span>18%</span></div>
-        <div class="bar-bg"><div class="bar-fill bar-green" style="width: 18%;"></div></div>
-        <div class="bar-label"><span>Bujia</span><span>55%</span></div>
-        <div class="bar-bg"><div class="bar-fill bar-yellow" style="width: 55%;"></div></div>
-      </div>
-    </div>
-    <p style="color: #555; font-size: .8rem; margin-top: 16px; text-align: center;">
-      * Los porcentajes indican desgaste estimado. 0% = nuevo, 100% = requiere cambio inmediato.
-    </p>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="brand">MotoSmart</div>
-    <p>MotoSmart Technologies S.A.S. - NIT: 901.XXX.XXX-X</p>
-    <p>Bucaramanga, Santander, Colombia</p>
-    <div class="links">
-      <a href="#mision">Mision</a>
-      <a href="#quienes">Quienes Somos</a>
-      <a href="#login">Inicio de sesion</a>
-      <a href="#registro">Registro</a>
-      <a href="#specs">Especificaciones</a>
-      <a href="#dashboard">Dashboard</a>
-    </div>
-    <p style="margin-top: 16px;">2026 MotoSmart Technologies S.A.S. - Todos los derechos reservados.</p>
-    <p style="margin-top: 4px;">Proyecto academico - Borrador de avance</p>
-  </footer>
-
-  <script src="./js/script.js"></script>
-
+  </main>
 </body>
 </html>
