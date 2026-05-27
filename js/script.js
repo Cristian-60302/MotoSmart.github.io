@@ -1,6 +1,6 @@
 // script.js
 // Frontend para GitHub Pages. Cambia esta URL cuando tengas publicada tu API.
-const API_BASE_URL = 'https://TU-API.vercel.app/api';
+const API_BASE_URL = 'https://motosmart-api-vercel-github-io.vercel.app/api';
 
 document.addEventListener('DOMContentLoaded', function() {
   const loginForm = document.querySelector('#loginForm');
