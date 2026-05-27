@@ -648,3 +648,120 @@ footer .links a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== AJUSTE FINAL HOME ===== */
+body.welcome-page {
+  overflow-x: hidden;
+}
+body.welcome-page .welcome-header {
+  height: 86px;
+  padding: 0 42px;
+}
+body.welcome-page .brand-link {
+  color: #ff3434;
+  font-size: 1.1rem;
+}
+body.welcome-page .brand-mark {
+  background: transparent;
+  color: #ff3434;
+  height: auto;
+  width: auto;
+}
+body.welcome-page .welcome-main {
+  padding-top: 86px;
+}
+body.welcome-page .welcome-hero {
+  align-items: center;
+  display: grid;
+  gap: 44px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+  max-width: 1360px;
+  min-height: calc(100vh - 86px);
+  padding: 92px 42px 70px;
+}
+body.welcome-page .welcome-copy {
+  min-width: 0;
+}
+body.welcome-page .eyebrow {
+  color: #ff3434 !important;
+  font-size: .95rem !important;
+  margin-bottom: 12px;
+}
+body.welcome-page .welcome-copy h1 {
+  color: #f3f3f3;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 1.02;
+  margin-bottom: 18px;
+}
+body.welcome-page .welcome-copy p {
+  color: #d6d6d6;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  max-width: 980px;
+}
+body.welcome-page .welcome-buttons {
+  margin-top: 28px;
+}
+body.welcome-page .welcome-panel {
+  align-self: center;
+  background: #111;
+  border: 1px solid #2b2b2b;
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+}
+body.welcome-page .metric {
+  background: #1a1a1a;
+  border-left: 4px solid #d21f1f;
+  border-radius: 8px;
+  padding: 18px;
+}
+body.welcome-page .metric span {
+  color: #8f8f8f;
+  display: block;
+  font-size: .86rem;
+}
+body.welcome-page .metric strong {
+  color: #f1f1f1;
+  display: block;
+  font-size: 1.22rem;
+  margin-top: 4px;
+}
+body.welcome-page .welcome-info {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1360px;
+  padding: 52px 42px 80px;
+}
+body.welcome-page .welcome-info h2 {
+  color: #ff3434;
+  font-size: 1.45rem;
+}
+body.welcome-page .welcome-info p {
+  color: #d0d0d0;
+}
+
+@media(max-width: 900px) {
+  body.welcome-page .welcome-hero,
+  body.welcome-page .welcome-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 700px) {
+  body.welcome-page .welcome-header {
+    height: auto;
+    padding: 16px;
+  }
+  body.welcome-page .welcome-main {
+    padding-top: 144px;
+  }
+  body.welcome-page .welcome-hero {
+    padding: 42px 18px;
+  }
+  body.welcome-page .welcome-info {
+    padding: 32px 18px 56px;
+  }
+}
