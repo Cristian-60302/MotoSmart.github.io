@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const loginForm = document.querySelector('#loginForm');
   const registerForm = document.querySelector('#registerForm');
   const logoutBtn = document.querySelector('#logoutBtn');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('#mainNav');
   const loginMessage = document.querySelector('#loginMessage');
   const registerMessage = document.querySelector('#registerMessage');
   const protectedPage = document.body.dataset.protected === 'true';
@@ -118,6 +120,22 @@ document.addEventListener('DOMContentLoaded', function() {
     logoutBtn.addEventListener('click', function() {
       saveStoredUser(null);
       window.location.href = '../index.html';
+    });
+  }
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    mainNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mainNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 });
