@@ -579,6 +579,36 @@ input:focus, select:focus {
   font-size: .85rem;
   margin-bottom: 20px;
 }
+.data-notice {
+  align-items: flex-start;
+  background: #171717;
+  border: 1px solid #2a2a2a;
+  border-left: 4px solid #c41e1e;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  margin: 0 0 20px;
+  padding: 14px;
+}
+.notice-icon {
+  align-items: center;
+  background: #c41e1e;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: .82rem;
+  font-weight: 900;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+.data-notice p {
+  color: #bdbdbd;
+  font-size: .86rem;
+  line-height: 1.45;
+  margin: 0;
+}
 
 /* ===== FOOTER ===== */
 footer {
