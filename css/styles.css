@@ -336,6 +336,57 @@ input:focus, select:focus {
 .btn:hover { 
   background: #a01818; 
 }
+.auth-panel {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 20px;
+}
+.auth-form {
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+}
+.auth-form .btn {
+  grid-column: auto;
+}
+.session-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.session-box strong,
+.session-box span {
+  display: block;
+}
+.session-box strong {
+  color: #eee;
+}
+.session-box span {
+  color: #777;
+  font-size: .85rem;
+  margin-top: 4px;
+}
+.btn-secondary {
+  background: #252525;
+  border: 1px solid #444;
+  width: auto;
+}
+.btn-secondary:hover {
+  background: #333;
+}
+.form-message {
+  grid-column: 1 / -1;
+  min-height: 20px;
+  color: #888;
+  font-size: .86rem;
+}
+.form-message.success {
+  color: #4ade80;
+}
+.form-message.error {
+  color: #f87171;
+}
 
 /* ===== FOOTER ===== */
 footer {
@@ -364,8 +415,15 @@ footer .links a:hover {
 }
 
 @media(max-width: 700px) {
-  .grid2, .grid3, form { 
+  .grid2, .grid3, form, .auth-form { 
     grid-template-columns: 1fr; 
+  }
+  .auth-form .btn {
+    grid-column: 1 / -1;
+  }
+  .session-box {
+    align-items: stretch;
+    flex-direction: column;
   }
   .hero h1 { 
     font-size: 1.8rem; 

@@ -14,6 +14,7 @@
     <nav>
       <a href="#mision">Mision</a>
       <a href="#quienes">Quienes Somos</a>
+      <a href="#login">Inicio de sesion</a>
       <a href="#registro">Registro</a>
       <a href="#specs">Especificaciones</a>
       <a href="#dashboard">Dashboard</a>
@@ -31,6 +32,33 @@
       <span>Notificaciones</span>
     </div>
   </div>
+
+  <!-- ===== INICIO DE SESION ===== -->
+  <section id="login">
+    <h2>Inicio de Sesion</h2>
+    <p class="desc">Ingresa con un usuario creado en la base de datos.</p>
+    <div class="auth-panel">
+      <form id="loginForm" class="auth-form">
+        <div>
+          <label>Correo electronico</label>
+          <input id="loginEmail" name="email" type="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+        </div>
+        <div>
+          <label>Contrasena</label>
+          <input id="loginPassword" name="password" type="password" placeholder="********" autocomplete="current-password" required>
+        </div>
+        <button class="btn" type="submit">Ingresar</button>
+      </form>
+      <div id="sessionBox" class="session-box" hidden>
+        <div>
+          <strong id="sessionName">Usuario activo</strong>
+          <span id="sessionEmail"></span>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary" type="button">Cerrar sesion</button>
+      </div>
+      <p id="loginMessage" class="form-message" aria-live="polite"></p>
+    </div>
+  </section>
 
   <!-- ===== MISION Y VISION ===== -->
   <div class="alt-bg" id="mision">
@@ -79,27 +107,27 @@
   <div class="alt-bg" id="registro">
     <section class="inner">
       <h2>Registro de Usuario</h2>
-      <p class="desc">Crea tu cuenta para comenzar a gestionar tu motocicleta. (Borrador - sin verificacion)</p>
-      <form>
+      <p class="desc">Crea tu cuenta para comenzar a gestionar tu motocicleta. El correo queda guardado para validar el inicio de sesion.</p>
+      <form id="registerForm">
         <div>
           <label>Nombre completo</label>
-          <input type="text" placeholder="Juan Perez">
+          <input name="nombre" type="text" placeholder="Juan Perez" autocomplete="name" required>
         </div>
         <div>
           <label>Correo electronico</label>
-          <input type="email" placeholder="correo@ejemplo.com">
+          <input name="email" type="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
         </div>
         <div>
           <label>Contrasena</label>
-          <input type="password" placeholder="********">
+          <input name="password" type="password" placeholder="********" autocomplete="new-password" minlength="6" required>
         </div>
         <div>
           <label>Confirmar contrasena</label>
-          <input type="password" placeholder="********">
+          <input name="confirmPassword" type="password" placeholder="********" autocomplete="new-password" minlength="6" required>
         </div>
         <div>
           <label>Marca de moto</label>
-          <select>
+          <select name="marca">
             <option>Yamaha</option>
             <option>Honda</option>
             <option>Suzuki</option>
@@ -111,17 +139,18 @@
         </div>
         <div>
           <label>Modelo</label>
-          <input type="text" placeholder="FZ 2.0">
+          <input name="modelo" type="text" placeholder="FZ 2.0">
         </div>
         <div>
           <label>Ano</label>
-          <input type="number" placeholder="2023">
+          <input name="anio" type="number" placeholder="2023" min="1900" max="2100">
         </div>
         <div>
           <label>Kilometraje actual</label>
-          <input type="number" placeholder="12000">
+          <input name="kilometraje" type="number" placeholder="12000" min="0">
         </div>
         <button class="btn" type="submit">Registrarme</button>
+        <p id="registerMessage" class="form-message" aria-live="polite"></p>
       </form>
     </section>
   </div>
@@ -302,6 +331,7 @@
     <div class="links">
       <a href="#mision">Mision</a>
       <a href="#quienes">Quienes Somos</a>
+      <a href="#login">Inicio de sesion</a>
       <a href="#registro">Registro</a>
       <a href="#specs">Especificaciones</a>
       <a href="#dashboard">Dashboard</a>
